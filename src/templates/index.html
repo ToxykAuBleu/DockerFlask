@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='request.js') }}" defer></script>
+    <title>Test application Flask</title>
+</head>
+<body>
+    <h1>Gestion des CD</h1>
+    <h2>Liste</h2>
+    <div id="liste-cd"></div>
+
+    <hr>
+    <h2>Nouveau CD</h2>
+    <form id="new-cd" method="post" action="newCD">
+        <label for="input-title">Titre: </label>
+            <input type="text" name="input-title"><br>
+        <label for="input-auteur">Auteur: </label>
+            <input type="text" name="input-auteur"><br>
+        <label for="input-genre">Genre: </label>
+            <input type="text" name="input-genre"><br>
+        <label for="input-price">Prix: </label>
+            <input type="text" name="input-price"><br>
+        <input id="submit-new-cd" type="submit" value="Ajouter">
+    </form>
+
+</body>
+</html>
